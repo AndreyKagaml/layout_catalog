@@ -12,6 +12,8 @@
   align-items: center;
   justify-content: flex-end;
 
+  transition: color $transition-time;
+
   &__nav {
     position: relative;
     right: 50px;
@@ -31,8 +33,9 @@
     line-height: 60px;
     height: 60px;
     text-decoration: none;
-    color: #060b35;
+    color: $text-color;
     margin-left: 20px;
+    transition: color $transition-time;
 
     &:hover {
       color: $button-color;
@@ -40,12 +43,12 @@
   }
 }
 
-.is-active {
+.header__link--active {
   color: $button-color;
   position: relative;
 }
 
-.is-active::after {
+.header__link--active::after {
   content: '';
   display: block;
   position: absolute;

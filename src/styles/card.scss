@@ -3,7 +3,7 @@
   box-sizing: border-box;
   position: relative;
   top: 0;
-  border: 1px solid #f3f3f3;
+  border: 1px solid $card-border-color;
   border-radius: 5px;
   padding-top: 32px;
   transition: transform $transition-time;
@@ -23,7 +23,7 @@
   }
 
   &__title {
-    color: #060b35;
+    color: $text-color;
     font-size: 12px;
     font-weight: 500;
     display: block;
@@ -33,11 +33,11 @@
   }
 
   &:hover &__title {
-    color: #34568b;
+    color: $title-color-hover;
   }
 
   &__code {
-    color: #616070;
+    color: $price-color;
     font-size: 10px;
     font-weight: 400;
     display: block;
@@ -74,14 +74,14 @@
     height: 18px;
 
     &-text {
-      color: #616070;
+      color: $price-color;
       font-size: 12px;
       margin: 0;
       display: block;
     }
 
     &-count {
-      color: #060b35;
+      color: $text-color;
       font-size: 16px;
       margin: 0;
       display: block;
@@ -96,17 +96,21 @@
     border-radius: 5px;
     display: flex;
     text-decoration: none;
-    color: #fff;
+    color: $button-text-color;
     align-items: center;
     justify-content: center;
     line-height: 40px;
     box-sizing: border-box;
     font-weight: 700;
     font-size: 14px;
+
+    transition:
+      background-color $transition-time,
+      color $transition-time;
   }
 
   &__button:hover {
-    background-color: #fff;
+    background-color: $button-text-color;
     color: $button-color;
   }
 }
