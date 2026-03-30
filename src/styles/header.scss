@@ -1,0 +1,58 @@
+.header {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+
+  display: flex;
+  position: relative;
+  width: 100%;
+
+  align-items: center;
+  justify-content: flex-end;
+
+  &__nav {
+    position: relative;
+    right: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__img {
+    position: absolute;
+    left: 50px;
+    top: 10px;
+  }
+
+  &__link {
+    display: inline-block;
+    line-height: 60px;
+    height: 60px;
+    text-decoration: none;
+    color: #060b35;
+    margin-left: 20px;
+
+    &:hover {
+      color: $button-color;
+    }
+  }
+}
+
+.is-active {
+  color: $button-color;
+  position: relative;
+}
+
+.is-active::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 37px;
+  height: 4px;
+
+  background-color: $button-color;
+  border-radius: 8px;
+}
