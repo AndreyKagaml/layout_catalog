@@ -43,19 +43,18 @@
   }
 }
 
-.is-active {
+.header__link.is-active {
   color: $button-color;
   position: relative;
-}
 
-.is-active::after {
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: 0;
-  width: 37px;
-  height: 4px;
-
-  background-color: $button-color;
-  border-radius: 8px;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 37px;
+    height: 4px;
+    background-color: $button-color;
+    border-radius: 8px;
+  }
 }
